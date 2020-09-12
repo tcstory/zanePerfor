@@ -1,0 +1,16 @@
+version: '3.4'
+services:
+  mongo:
+    build:
+      context: ./
+      dockerfile: mongo
+    image: zane-mongo
+    ports:
+      - "27017:27017"
+  redis:
+    build:
+      context: ./
+      dockerfile: redis
+    image: zane-redis
+    ports:
+      - "6379:6379"
